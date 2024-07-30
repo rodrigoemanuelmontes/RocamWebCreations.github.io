@@ -1,0 +1,37 @@
+nav {
+    background-color: black;
+    display: flex; /* Utiliza Flexbox para alinear los elementos */
+    justify-content: flex-end; /* Alinea los elementos a la derecha */
+    padding: 10px; /* Añade un poco de espacio alrededor del nav */
+    width: 100%; /* Asegura que el nav cubra el ancho completo del viewport */
+    box-sizing: border-box; /* Incluye el padding en el ancho total */
+}
+
+/* Estilos para los enlaces */
+nav a {
+    text-decoration: none; /* Elimina la subrayado del texto */
+    color: white;
+    margin-left: 20px; /* Añade espacio entre los enlaces */
+    font-family: Arial, sans-serif; /* Fuente (opcional) */
+    font-size: 20px; /* Tamaño de fuente (opcional) */
+    transition: all 0.3s ease; /* Suaviza el cambio de estilo */
+}
+
+/* Estilos para los enlaces en estado hover */
+nav a:hover {
+    font-size: 24px; /* Tamaño de fuente más grande al pasar el cursor */
+    font-weight: bold; /* Hace el texto negrita al pasar el cursor */
+    color: #ccc; /* Cambia el color del texto al pasar el cursor (opcional) */
+}
+
+/* Opcional: Estilos adicionales para mejorar la apariencia en dispositivos móviles */
+@media (max-width: 768px) {
+    nav {
+        flex-direction: column; /* Apila los elementos verticalmente en pantallas pequeñas */
+        align-items: flex-end; /* Alinea los elementos a la derecha */
+    }
+
+    nav a {
+        margin: 10px 0; /* Espacio vertical entre los enlaces */
+    }
+}
