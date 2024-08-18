@@ -3,16 +3,73 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Proyectos | Rocam Web Creations</title>
     <link rel="stylesheet" href="/style.css">
+    <style>
+        /* Estilos específicos para la página de proyectos */
+        .content {
+            position: relative;
+            z-index: 2;
+            color: white;
+            text-align: center;
+            padding: 50px 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+            min-height: 100vh; /* Asegurarse de que el contenido tenga suficiente altura */
+        }
+
+        .project-item {
+            margin-bottom: 30px;
+            padding: 20px;
+            border-radius: 8px;
+            background-color: rgba(0, 0, 0, 0.7);
+        }
+        .project-item h2 {
+            font-size: 2em;
+            margin-bottom: 10px;
+        }
+      
+        .project-item img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+            display: block;
+            margin: 0 auto;
+        }
+    </style>
 </head>
 <body>
     <header>
         <nav>
             <a href="/index.html">Inicio</a>
             <a href="/servicios.html">Servicios</a>
+            <a href="/proyectos.html">Proyectos</a>
             <a href="/contacto.html">Contacto</a>
         </nav>
     </header>
+
+    <!-- Video de fondo -->
+    <video class="video-background" autoplay muted loop>
+        <source src="/videos/background-video.mp4" type="video/mp4">
+        Tu navegador no soporta el elemento de video.
+    </video>
+
+    <!-- Contenido de la página de proyectos -->
+    <div class="content">
+        <h1>Proyectos Realizados</h1>
+        <div class="project-item">
+            <h2>Desarrollo página para venta y alquiler de propiedades</h2>
+            <a href="https://facilitacionesinmuebles.github.io/index.html"><img src="/img/proyecto-1.jpg" alt="Proyecto 1"></a>
+            <p>Desarrollo personalizado de página web acorde a las necesidades del cliente, con pestañas para todas las propiedades, pestaña de contacto con envío a mail y botón flotante de WhatsApp en todas las ventanas.</p></a>
+        </div>
+        <div class="project-item">
+            <h2>Proyecto 2: Plataforma de Gestión para Restaurantes</h2>
+            <p>Desarrollo de una plataforma web para la gestión de reservas, pedidos y menús de restaurantes. Incluye integración con sistemas de punto de venta.</p>
+        </div>
+        <div class="project-item">
+            <h2>Proyecto 3: Sitio Web Corporativo</h2>
+            <p>Diseño y desarrollo de un sitio web corporativo para una empresa de tecnología. Incluye secciones de servicios, equipo y contacto, con diseño responsivo.</p>
+        </div>
+    </div>
 </body>
 </html>
