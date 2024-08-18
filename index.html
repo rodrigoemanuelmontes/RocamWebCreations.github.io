@@ -3,16 +3,63 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Inicio | Rocam Web Creations</title>
     <link rel="stylesheet" href="/style.css">
 </head>
 <body>
     <header>
         <nav>
+            <a href="/index.html">Inicio</a>
             <a href="/servicios.html">Servicios</a>
             <a href="/proyectos.html">Proyectos realizados</a>
             <a href="/contacto.html">Contacto</a>
         </nav>
     </header>
+
+    <!-- Video de fondo -->
+    <video class="video-background" autoplay muted loop>
+        <source src="/videos/background-video.mp4" type="video/mp4">
+        Tu navegador no soporta el elemento de video.
+    </video>
+
+    <!-- Texto sobre el video -->
+    <div class="text-overlay" id="text-overlay"></div>
+
+    <script>
+        // JavaScript para el efecto de texto que se escribe y se borra
+        const textOverlay = document.getElementById('text-overlay');
+        const text = "Rocam Web Creations, diseños responsivos";
+        let index = 0;
+        let isDeleting = false;
+        const speed = 100; // Velocidad de escritura y borrado
+        const pauseTime = 1000; // Tiempo de pausa después de borrar el texto
+
+        function typeText() {
+            if (!isDeleting) {
+                if (index < text.length) {
+                    textOverlay.textContent += text.charAt(index);
+                    index++;
+                    setTimeout(typeText, speed);
+                } else {
+                    isDeleting = true;
+                    setTimeout(typeText, pauseTime); // Pausa antes de comenzar a borrar
+                }
+            } else {
+                if (index > 0) {
+                    textOverlay.textContent = text.substring(0, index - 1);
+                    index--;
+                    setTimeout(typeText, speed);
+                } else {
+                    isDeleting = false;
+                    setTimeout(typeText, pauseTime); // Pausa antes de comenzar a escribir de nuevo
+                }
+            }
+        }
+
+        // Inicia el efecto de escritura y borrado cuando la página carga
+        window.onload = () => {
+            typeText();
+        };
+    </script>
 </body>
 </html>

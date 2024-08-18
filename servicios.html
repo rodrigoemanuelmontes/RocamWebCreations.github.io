@@ -3,16 +3,142 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Servicios | Rocam Web Creations</title>
     <link rel="stylesheet" href="/style.css">
+    <style>
+        /* Estilos para el video de fondo */
+        body, html {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            overflow: hidden;
+            font-family: 'Roboto', sans-serif; /* Tipografía global */
+        }
+        .video-background {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            z-index: -1;
+        }
+        /* Estilos para el encabezado */
+        header {
+            position: relative;
+            z-index: 2;
+            padding: 10px;
+            background-color: rgba(0, 0, 0, 0.5); /* Fondo semitransparente para el encabezado */
+        }
+        nav {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 10px;
+            font-size: 1.2em;
+            transition: color 0.3s;
+        }
+        nav a:hover {
+            color: #4CAF50; /* Color verde al pasar el ratón */
+        }
+        /* Estilos para la sección de servicios */
+        .content {
+            position: relative;
+            z-index: 2;
+            color: white;
+            text-align: center;
+      
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        .content h1 {
+            font-size: 2.5em;
+            margin-bottom: 20px;
+        }
+        .content p {
+            font-size: 1.2em;
+            line-height: 1.6;
+        }
+        .service-list {
+            margin-top: 30px;
+        }
+        .service-item {
+            margin-bottom: 20px;
+            font-size: 1.2em;
+        }
+        .service-item::before {
+            content: "✔ ";
+            color: #4CAF50; /* Color verde para los íconos de verificación */
+        }
+        /* Media Queries para responsividad */
+        @media (max-width: 768px) {
+            .content h1 {
+                font-size: 2em;
+            }
+            .content p {
+                font-size: 1em;
+            }
+            .service-item {
+                font-size: 1em;
+            }
+            nav a {
+                font-size: 1em;
+                margin: 0 5px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .content h1 {
+                font-size: 1.5em;
+            }
+            .content p {
+                font-size: 0.9em;
+            }
+            .service-item {
+                font-size: 0.9em;
+            }
+            nav a {
+                font-size: 0.9em;
+                margin: 0 3px;
+            }
+        }
+    </style>
+    <!-- Enlace a Google Fonts para la tipografía -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body>
     <header>
         <nav>
             <a href="/index.html">Inicio</a>
+            <a href="/servicios.html">Servicios</a>
             <a href="/proyectos.html">Proyectos realizados</a>
             <a href="/contacto.html">Contacto</a>
         </nav>
     </header>
+
+    <!-- Video de fondo -->
+    <video class="video-background" autoplay muted loop>
+        <source src="/videos/background-video.mp4" type="video/mp4">
+        Tu navegador no soporta el elemento de video.
+    </video>
+
+    <!-- Contenido de la página de servicios -->
+    <div class="content">
+        <h1>Servicios de Desarrollo Web</h1>
+        <p>En Rocam Web Creations ofrecemos servicios de desarrollo web personalizados para negocios de todo tipo e industria. Nos adaptamos a tus necesidades para proporcionar soluciones efectivas y de alta calidad. Ya sea que necesites un sitio web para tu empresa, una tienda en línea o una plataforma de gestión, estamos aquí para ayudarte.</p>
+        
+        <div class="service-list">
+            <div class="service-item">Diseño y desarrollo de sitios web personalizados.</div>
+            <div class="service-item">Creación de tiendas en línea con sistemas de pago integrados.</div>
+            <div class="service-item">Optimización de sitios web para motores de búsqueda (SEO).</div>
+            <div class="service-item">Desarrollo de aplicaciones web y sistemas de gestión.</div>
+            <div class="service-item">Mantenimiento y soporte continuo para tu sitio web.</div>
+        </div>
+    </div>
 </body>
 </html>
+

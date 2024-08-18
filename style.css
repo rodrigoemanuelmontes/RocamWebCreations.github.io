@@ -1,5 +1,5 @@
 nav {
-    background-color: black;
+    background-color:unset;
     display: flex; /* Utiliza Flexbox para alinear los elementos */
     justify-content: flex-end; /* Alinea los elementos a la derecha */
     padding: 10px; /* Añade un poco de espacio alrededor del nav */
@@ -12,7 +12,7 @@ nav a {
     text-decoration: none; /* Elimina la subrayado del texto */
     color: white;
     margin-left: 20px; /* Añade espacio entre los enlaces */
-    font-family: Arial, sans-serif; /* Fuente (opcional) */
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;/* Fuente (opcional) */
     font-size: 20px; /* Tamaño de fuente (opcional) */
     transition: all 0.3s ease; /* Suaviza el cambio de estilo */
 }
@@ -35,3 +35,54 @@ nav a:hover {
         margin: 10px 0; /* Espacio vertical entre los enlaces */
     }
 }
+
+   
+
+
+
+
+
+
+/* Estilos para el video de fondo */
+        body, html {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            overflow: hidden;
+        }
+        .video-background {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            z-index: -1;
+        }
+        /* Estilos para el texto */
+        .text-overlay {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            color: white;
+            font-size: 3em; /* Tamaño del texto */
+            text-align: center;
+            z-index: 1;
+            padding: 0 20px;
+            font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; 
+            font-style: italic;/* Tipografía */
+        }
+        /* Estilos para el encabezado */
+        header {
+            position: relative;
+            z-index: 2;
+            padding: 10px;
+            background-color: rgba(0, 0, 0, 0.5); /* Fondo semitransparente para el texto y los enlaces */
+        }
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 15px;
+            font-size: 1.2em;
+        }
