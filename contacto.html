@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contacto | Rocam Web Creations</title>
+    <link rel="stylesheet" href="/style.css">
+    <style>
+        /* Estilos específicos para la página de contacto */
+        .content {
+            position: relative;
+            z-index: 2;
+            color: white;
+            text-align: center;
+            padding: 50px 20px;
+            max-width: 800px;
+            margin: 0 auto;
+            min-height: 100vh; /* Asegurarse de que el contenido tenga suficiente altura */
+        }
+        .content h1 {
+            font-size: 2.5em;
+            margin-bottom: 20px;
+        }
+        .contact-form {
+            background-color: rgba(0, 0, 0, 0.7);
+            padding: 20px;
+            border-radius: 8px;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        .contact-form label {
+            display: block;
+            margin-bottom: 10px;
+            font-size: 1.2em;
+        }
+        .contact-form input, .contact-form textarea {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 20px;
+            border: none;
+            border-radius: 4px;
+            font-size: 1em;
+        }
+        .contact-form textarea {
+            height: 150px;
+            resize: vertical;
+        }
+        .contact-form button {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 4px;
+            font-size: 1.2em;
+            cursor: pointer;
+        }
+        .contact-form button:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="/index.html">Inicio</a>
+            <a href="/servicios.html">Servicios</a>
+            <a href="/proyectos.html">Proyectos</a>
+            <a href="/contacto.html">Contacto</a>
+        </nav>
+    </header>
+
+    <!-- Video de fondo -->
+    <video class="video-background" autoplay muted loop>
+        <source src="/videos/background-video.mp4" type="video/mp4">
+        Tu navegador no soporta el elemento de video.
+    </video>
+
+    <!-- Contenido de la página de contacto -->
+    <div class="content">
+        <h1>Contacto</h1>
+        <div class="contact-form">
+            <form action="/enviar-formulario" method="post">
+                <label for="name">Nombre:</label>
+                <input type="text" id="name" name="name" required>
+
+                <label for="email">Correo Electrónico:</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="message">Mensaje:</label>
+                <textarea id="message" name="message" required></textarea>
+
+                <button type="submit">Enviar Mensaje</button>
+            </form>
+        </div>
+    </div>
+</body>
+</html>
